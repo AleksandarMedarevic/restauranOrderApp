@@ -9,7 +9,6 @@ let createMenuArray= ``
 let mainContainer= document.getElementById("mainContainer")
 let orderContainer = document.getElementById("orderContainer")
 let ordersArray = []
-ordersArray.length = 0
 
 menuArray.forEach(function(item){
      createMenuArray += `
@@ -53,9 +52,12 @@ document.addEventListener('click', function(e){
     if (e.target.dataset.order){
     e.preventDefault()
     close()
+    form.reset()
+    ordersArray.length = 0
+    totalPrice=0
+    let homMany=0
     const loginFormData = new FormData(document.getElementById("form"))
     fullName = loginFormData.get('fullName')
-    document.getElementById("form").reset()
     document.getElementById("finalMessage").innerHTML=`
     Dear ${fullName}, thank you for using our service. 
     <p>Your order in on the way. </p> 
@@ -65,6 +67,7 @@ document.addEventListener('click', function(e){
     document.addEventListener("click", function(){
         document.getElementById("finalMessage").style.display= "none"
     })
+    
     }
 })
     
@@ -73,13 +76,11 @@ function handleOrder(idOrder){
         return order.id === idOrder
     })[0]
     if(ordersArray.includes(targetOrder)) {
-        console.log("vece je naruceno")
         targetOrder.homMany +=1
     }
     else {
         ordersArray.unshift(targetOrder)
     }
-    console.log(ordersArray)
     render()
     scroll()
 } 
@@ -115,21 +116,7 @@ function render(){
 }
 
 
-/*function scroll() {
-  orderContainer.scrollIntoView();
-}*/
 
 function close() {
     document.getElementById("modalHeader").parentElement.style.display = "none";
-}
-
-function showName(){
-const loginFormData = new FormData(document.getElementById("form"))
-    fullName = loginFormData.get('fullName')
-    document.getElementById("finalMessage").innerHTML=`
-    Dear ${fullName}, thank you for using our service. 
-    <p>Your order in on the way. </p> 
-    <p>Bon Appétit</p>` 
-    document.getElementById("finalMessage").style.display= "block"
-    orderContainer.innerHTML= ``
 }
