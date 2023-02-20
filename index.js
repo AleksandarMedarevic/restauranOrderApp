@@ -55,7 +55,7 @@ document.addEventListener('click', function(e){
     close()
     const loginFormData = new FormData(document.getElementById("form"))
     fullName = loginFormData.get('fullName')
-    e.reset()
+    document.getElementById("form").reset()
     document.getElementById("finalMessage").innerHTML=`
     Dear ${fullName}, thank you for using our service. 
     <p>Your order in on the way. </p> 
