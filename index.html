@@ -1,0 +1,32 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+       
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    </head>
+    <header class="header"></header>
+    <body>
+	<script src="index.js" type="module"></script>
+        <main id="mainContainer"> </main>
+        <div id="finalMessage" class="finalMessage"></div>
+        <div id="orderContainer" class="orderContainer"></div>
+        
+        
+        <div class="modal" id="modal">
+            <div class="modalHeader" id="modalHeader">
+                <div id="yourOrder"><h2>Your order </h2></div> <div class="close-modal" id="close-modal"> <button data-close="close"> X </button> </div>
+            </div>
+            <form id="form">
+            <div id="inputs" class="inputs">
+                 <input type="text" id="input-name" name="fullName" placeholder="Enter your name" required>
+                 <input type="text" id="input-number" name="cardnumber" placeholder="Enter your card number" required>
+                 <input type="number" id="input-ccv" name="ccv" placeholder="Enter your CVV" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, 3)">
+                 <button class="completeOrderBtn" data-order="order" type="submit"> Complete order </button>
+            </div>
+            </form>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+} 
+
+.header{
+position: absolute;
+height: 167px;
+left: 0px;
+top: 0px;
+background-image: url("images/banner.png");
+background-repeat: no-repeat;
+position: relative;
+background-size: cover;
+background-position: center;
+}
+
+.menuItem{
+    display: flex;
+    flex-direction: row;
+    width: 508px;
+    height: 140px;
+    justify-content: space-between;
+    margin: 40px auto 50px auto;
+    /*border: solid grey 1px;*/
+    box-shadow: 0 0 4px black;
+}
+
+.food {
+    /*width: 70px;
+    height: 89px;*/
+    font-weight: 400;
+    font-size: 79px;
+    text-align: center;
+    width: 20vw;
+/* or 125% */}
+
+.menuItem h2{
+     font-weight: 700;
+     color: #ac1012;
+     font-size: 28px;
+     line-height: 17px;
+     margin-bottom: -10px; 
+}
+
+.menuItem p {
+  font-size: 20px;
+ line-height: 24px;
+}
+
+.button5 {
+    margin: auto 3px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1.5px solid #DEDEDE;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.orders{
+    display: flex;
+    flex-direction: row;
+    width: 508px;
+    height: 40px;
+    justify-content: space-between;
+    margin: 3px auto 0 auto;
+    /*border: solid black 2px;*/
+    /*text-align: center;*/
+    /*padding: 0 auton -5px auto;*/
+}
+
+.orderContainer{
+    margin: 0px auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.orderBtn {
+    width: 508px;
+    height: 60px;
+    background: #ac1012;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.button6 {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    /*margin: auto 10px auto -100px;*/
+    /* or 200% */
+    color: #f3d095;
+}
+
+.orderLine {
+    border-bottom: 2px solid #ac1012;
+    width: 508px;
+    height: 3px;
+    margin:10px auto 0 auto;
+}
+
+.hide{
+    display: none;
+}
+
+.menuItem button:hover {background-color: #ac1012}
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 420px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 200px 50px #666;
+    background-color: whitesmoke;
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menuCentral{
+    width: 60vw
+}
+
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px auto;
+  height: 40px;
+  border: none;
+  box-shadow: 0 0 4px #666;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs button{
+  margin: auto;
+  width: 90%;
+  padding: 12px 20px;
+  /*margin: 8px 0;*/
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+  background: #ac1012; 
+}
+
+.modal h2{
+     font-weight: 700;
+     color: #ac1012;
+     font-size: 28px;
+     line-height: 17px;
+     margin: 20px auto;
+     padding: 0 15px;
+}
+
+input:focus {
+  border: 2px solid #666;
+}
+
+.finalMessage{
+    font-size: 30;
+    font-weight: 500;
+    background: #ac1012;
+    color: white;
+    height: 60vh;
+    margin: 10px 10px 0 10px
+}
+.finalMessage h3{
+    font-weight: 800;
+}
+
+.finalDiv {
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.finalMessage {
+    padding: 15px 40px;
+    background: #ac1012;
+    border-radius: 5px;
+    color: white;
+    margin-top: 50px;
+    display: none;
+    flex-direction: row;
+    width: 430px;
+    height: 80px;
+    justify-content: space-between;
+    margin: 40px auto 50px auto;
+}

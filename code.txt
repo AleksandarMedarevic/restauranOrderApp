@@ -1,0 +1,17 @@
+// za kreiranje liste
+
+<div class="prvi"> 
+            <div>aaaaaaaaaa</div>
+            <div>
+                <p>ggg</p>
+                <p>ggg</p>
+                <p>cena</p>
+            </div>
+            <div>
+                <p>button1</p>
+                <p>button2</p>
+            </div>
+        </div>
+        
+        
+<button id="push-button">Push</button>
