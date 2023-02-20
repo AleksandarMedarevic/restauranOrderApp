@@ -61,6 +61,9 @@ document.addEventListener('click', function(e){
     <p>Bon Appétit</p>` 
     document.getElementById("finalMessage").style.display= "block"
     orderContainer.innerHTML= ``
+    document.addEventListener("click", function(){
+        document.getElementById("finalMessage").style.display= "none"
+    })
     }
 })
     
